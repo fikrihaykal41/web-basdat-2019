@@ -13,11 +13,28 @@
 </head>
 <body>
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="#"><img src="images/Logo only white.png" alt="Logo" style="width: 50px;margin-left: 10px;"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <div class="collapse" id="navbarNavDropdown">
+                <ul class="nav navbar-nav mr auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Members</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Join Us</a>
+                    </li>
+                </ul>
+            </div>
             <div class="navbar-collapse collapse justify-content-end">
                 <ul class="nav navbar-nav mr auto">
                     <li class="nav-item">
@@ -48,13 +65,13 @@
                 
                 <h5>Terms and Conditions</h5>
                 <p>Please, read the terms and conditions below <b>before</b> filling out the form</p>
-                <button type="button" class="btn btn-lg lookinside">Look In Side</button>
+                <button type="button" class="btn btn-lg lookinside" data-toggle="modal" data-target="#lookinside">Look In Side</button>
 
                 <h5 style="padding-top: 5px;">Additional Task</h5>
                 <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-unique">Big Data</button>
-                    <button type="button" class="btn btn-unique">Product</button>
-                    <button type="button" class="btn btn-unique">Spatial</button>
+                    <button type="button" class="btn btn-unique" data-toggle="modal" data-target="#bigdata">Big Data</button>
+                    <button type="button" class="btn btn-unique" data-toggle="modal" data-target="#product">Product</button>
+                    <button type="button" class="btn btn-unique" data-toggle="modal" data-target="#spatial">Spatial</button>
                 </div>
             </div>
             
@@ -70,47 +87,46 @@
 
                         <div class="modal-body">
                             <div class="md-form">
-                                <input type="text" id="Form-name" class="form-control" placeholder="Name">
                                 <label for="Form-name">Your Name</label>
+                                <input type="text" id="Form-name" class="form-control" placeholder="Name">
                             </div>
                             <div class="md-form">
-                                <input type="text" id="Form-email" class="form-control" placeholder="E-mail">
                                 <label for="Form-email">Your E-mail</label>
+                                <input type="text" id="Form-email" class="form-control" placeholder="E-mail">
                             </div>
                             <div class="md-form">
-                                <input type="text" id="Form-nim" class="form-control" placeholder="NIM">
                                 <label for="Form-nim">Your Student Number (nim)</label>
+                                <input type="text" id="Form-nim" class="form-control" placeholder="NIM">
                             </div>
                             <div class="md-form">
-                                <input type="text" id="Form-hp" class="form-control" placeholder="+(62)">
                                 <label for="Form-hp">Your Phone Number</label>
+                                <input type="text" id="Form-hp" class="form-control" placeholder="+(62)">
                             </div>
                             <div class="md-form">
-                                <input type="text" id="Form-idLine" class="form-control" placeholder="ID Line">
                                 <label for="Form-idLine">Your ID Line</label>
+                                <input type="text" id="Form-idLine" class="form-control" placeholder="ID Line">
                             </div>
                             <div class="md-form">
-                                <input type="text" id="Form-department" class="form-control" placeholder="Major">
                                 <label for="Form-department">Your Major</label>
+                                <input type="text" id="Form-department" class="form-control" placeholder="Major">
                             </div>
                             <div class="md-form">
+                                <label for="Form-year">What Year Are You?</label>
                                 <select class="custom-select" id="Form-year">
                                     <option selected></option>
                                     <option value="1">Class of 2016</option>
                                     <option value="2">Class of 2017</option>
                                     <option value="3">Class of 2018</option>
                                 </select>
-                                <label for="Form-year">What Year Are You?</label>
                             </div>
                             <div class="md-form">
+                                <label for="Form-option1">What first group do you choose?</label>
                                 <select class="custom-select" id="Form-option1">
                                     <option selected></option>
                                     <option value="1">Big Data</option>
                                     <option value="2">Spatial</option>
                                     <option value="3">Product</option>
                                 </select>
-                                <label for="Form-option1">What first group do you choose?</label>
-                                
                             </div>
                             <div class="md-form">
                                 <div class="d-flex justify-content-center my-4">
@@ -125,13 +141,13 @@
                                 <hr>
                             </div>
                             <div class="md-form">
+                                <label for="Form-option1">What second group do you choose?</label>
                                 <select class="custom-select" id="Form-option2">
                                     <option selected></option>
                                     <option value="1">Big Data</option>
                                     <option value="2">Spatial</option>
                                     <option value="3">Product</option>
                                 </select>
-                                <label for="Form-option1">What second group do you choose?</label>
                             </div>
                             <div class="md-form">
                                 <div class="d-flex justify-content-center my-4">
@@ -145,10 +161,122 @@
                                 <p><b>Note: </b>Persentase yang dimaksud adalah persentase minat kamu untuk bergabung pada grup kedua</p>
                                 <hr>
                             </div>
+                            <div class="md-form">
+                                <label for="Form-motivation">Your Motivation</label>
+                                <textarea class="form-control" rows="4" id="Form-motivation" placeholder="My motivation join database lab is ..."></textarea>
+					            <p><b>Note:</b> Tell us about your reason want to join the database lab and what you get from the "additional task" that you have done before</p>
+                                <hr>
+                            </div>
+                            <div class="md-form">
+                                <label for="Form-photo">Your Portrait image</label>
+                                <center><input type="file" class="filestyle" data-icon="false" id="Form-photo"></center>
+                                <p><b>Note:</b> Please make sure image file is less than 500KB and in <b>format</b> JPG/JPEG/PNG</p>
+                                <hr>
+                            </div>
+                            <div class="md-form">
+                                <label for="Form-khs">Your KHS File</label>
+                                <center><input type="file" class="filestyle" data-icon="false" id="Form-khs"></center>
+                                <p><b>Note:</b> Please make sure khs file is less than 500KB and in <b>format</b>.pdf</p>
+                                <hr>
+                            </div>
+                            <div class="md-form">
+                                <label for="Form-cv">Your CV File</label>
+                                <center><input type="file" class="filestyle" data-icon="false" id="Form-cv"></center>
+                                <p><b>Note:</b> Please make sure cv file is less than 500KB and in <b>format</b>.pdf</p>
+                                <hr>
+                            </div>
+                            <div class="md-form">
+                                <label for="Form-ss">SCREENSHOT result of like and share</label>
+                                <center><input type="file" class="filestyle" data-icon="false" id="Form-ss"></center>
+                                <p><b>Note:</b> All screenshot are entered into a word file, and make sure it is less than 500KB and in the <b>format</b>.pdf</p>
+                                <hr>
+                            </div>
+                            <div class="md-form">
+                                <label for="Form-product">ADDITIONAL TASK (Product)</label>
+                                <center><input type="file" class="filestyle" data-icon="false" id="Form-product"></center>
+                                <p><b>Note:</b> Make sure the file is less than 2MB and in .rar / .zip format if the project 
+                                    is more than 2MB: compress it fiirst on https://tinyjpg.com/ or on the img src, call through 
+                                    the url whose image was uploaded at https:// ctrl .org/images</p>
+                                <hr>
+                            </div>
+                            <div class="md-form">
+                                <label for="Form-addtask">ADDITIONAL TASK</label>
+                                <center><input type="file" class="filestyle" data-icon="false" id="Form-addtask"></center>
+                                <p><b>Note:</b> Please make sure cv file is less than 500KB</p>
+                                <hr>
+                            </div>
+                        </div>
+                        <p><b>Note:</b> After SUBMIT, please ask our OA line: @basisdatalab to make sure your files are collected :) </p>
+                        <div class="modal-footer">
+                            <button type="button" class="btn">Submit</button>
+                            <button type="button" class="btn" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-
+            <div class="modal fade" id="lookinside">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modael-title">Term and Condition</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
 
+                        <div class="modal-body">
+                            ....
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="bigdata">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modael-title">Additional Task for Big Data</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <div class="modal-body">
+                            ....
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="product">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modael-title">Additional Task for Product</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <div class="modal-body">
+                            ....
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="spatial">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modael-title">Additional Task for Spatial</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <div class="modal-body">
+                            ....
+                        </div>
                         <div class="modal-footer">
                             <button type="button" class="btn" data-dismiss="modal">Close</button>
                         </div>

@@ -1,3 +1,4 @@
+
 button:focus {
     outline: 0;
 }
@@ -99,8 +100,13 @@ button.navbar-toggler.border-0 {
     -webkit-box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15);
     box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15); }
 
+.md-form ::placeholder {
+    color: #fff;
+}
+
 .md-form input {
     background-color:  #4fb677;
+
 }
 
 .md-form select {
@@ -109,6 +115,13 @@ button.navbar-toggler.border-0 {
     float: justify;
 }
 
+.md-form textarea {
+    background-color: #4fb677;
+}
+
+.filestyle {
+    color: #fff;
+}
 #ex1Slider .slider-selection {
 	background: #BABABA;
 }
